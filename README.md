@@ -42,6 +42,8 @@ public class Node {
 
 [Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree)
 
+[MD5 Message Digest Algorithm](https://reflectoring.io/creating-hashes-in-java/)
+
 ## Misc
 
 Note: Merkle Tree is a USPTO patented Algorithm/ Data Structure and hence, you cannot use it in production without permission or by paying royality to Ralph Merkle. Merkle Tree is also known as Hash Tree.
