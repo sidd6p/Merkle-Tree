@@ -36,6 +36,12 @@ public class Node {
     * In this was each Internal Node is the hash of its child nodes and root node is the hash of the whole tree.
     * Benifit of using Hash Function in Merkle Tree is that even a small change in the child can effect its parent and then parent will effect its parent; and this preocess propogarte till the root node. This effect is called avalanche effect. It makes impossible for someone to manipluate the history stored in Merkle Trees
 
+
+## Refrence
+[Merkle Tree: Implementation in java and its real world applications](https://www.pranaybathini.com/2021/05/merkle-tree.html)
+
+[Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree)
+
 ## Misc
 
 Note: Merkle Tree is a USPTO patented Algorithm/ Data Structure and hence, you cannot use it in production without permission or by paying royality to Ralph Merkle. Merkle Tree is also known as Hash Tree.
