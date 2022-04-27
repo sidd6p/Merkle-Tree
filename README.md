@@ -37,6 +37,10 @@ public class Node {
     * Benifit of using Hash Function in Merkle Tree is that even a small change in the child can effect its parent and then parent will effect its parent; and this preocess propogarte till the root node. This effect is called avalanche effect. It makes impossible for someone to manipluate the history stored in Merkle Trees
 
 
+## Results
+<img width="auto" alt="image" src="https://user-images.githubusercontent.com/91800813/165590627-6c068ba4-f97c-4be1-adde-2368d8089f8a.png">
+
+
 ## Refrence
 [Merkle Tree: Implementation in java and its real world applications](https://www.pranaybathini.com/2021/05/merkle-tree.html)
 
