@@ -12,8 +12,9 @@ public class MerkleTree {
 
     private static Node makeMerkleTree(List<Node> nodes) throws NoSuchAlgorithmException {
         List<Node> innerNodes = new ArrayList<>();
-
-        while (nodes.size() != 1) {
+        int i = 0;
+        while (nodes.size() != 1 && i < 10) {
+            i++;
             int idx = 0, len = nodes.size();
             while (idx < len) {
                 Node leftChild = nodes.get(idx);
@@ -22,6 +23,8 @@ public class MerkleTree {
                     rightChild = nodes.get(idx + 1);
                 }
                 else {
+                    // If there are odd number of leaf node, 
+                    //then this we will insert closest leftmost node as extra node
                     rightChild = new Node(null, null, leftChild.getHash());
                 }
 
@@ -31,7 +34,7 @@ public class MerkleTree {
             }
 
             nodes = innerNodes;
-            innerNodes.clear();
+            innerNodes = new ArrayList<>();
 
         }
         return nodes.get(0);
@@ -40,10 +43,6 @@ public class MerkleTree {
     public static void printMerkleTree(Node root) {
         if (root == null) {
             return ;
-        }
-
-        if (root.getLeftNode() == null && root.getRightNode() == null) {
-            print(root.getHash());
         }
 
         List<Node> nodes = new ArrayList<>();
