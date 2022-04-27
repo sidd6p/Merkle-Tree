@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class HashAlgo {
 
-   public String getHash(final String input) throws NoSuchAlgorithmException {
+   public static String getHash(final String input) throws NoSuchAlgorithmException {
 
       String hashtext = null;
       MessageDigest md = MessageDigest.getInstance("MD5");
@@ -19,7 +19,7 @@ public class HashAlgo {
       return hashtext;
    }
 
-   private String convertToHex(final byte[] messageDigest) {
+   private static String convertToHex(final byte[] messageDigest) {
       BigInteger bigint = new BigInteger(1, messageDigest);
       String hexText = bigint.toString(16);
       while (hexText.length() < 32) {
